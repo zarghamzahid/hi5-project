@@ -1,0 +1,69 @@
+
+<div class="banner">
+  
+</div>
+
+
+<div class="container">
+  <div [hidden]="submitted">
+    <h1>Contact me to begin your Journey</h1>
+    <form (ngSubmit)="onSubmit()" #inquiryForm="ngForm">
+      <div class="form-group">
+        <label for="name">Customer Name*</label>
+        <input type="text" class="form-control" id="name"
+               required 
+               [(ngModel)]="inquiry.custName" name="custName"
+               #name="ngModel"> {{inquiry.custName}}
+        <div [hidden]="name.valid || name.pristine"
+             class="alert alert-danger">
+          Name is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email*</label>
+        <input type="text" class="form-control" id="email"
+              required 
+              [(ngModel)]="inquiry.email" name="email"
+              #email="ngModel"> 
+        <div [hidden]="name.valid || name.pristine"
+              class="alert alert-danger">
+           Email is required
+         </div>
+      </div>
+
+      <div class="form-group">
+        <label for="phoneNum">Phone Number*</label>
+        <input type="text" class="form-control" id="phoneNum"
+                required 
+                [(ngModel)]="inquiry.phoneNum" name="phoneNum"
+                #phoneNum="ngModel"> 
+        <div [hidden]="phoneNum.valid || phoneNum.pristine" class="alert alert-danger">
+          Phone number is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message*</label>
+        <input type="text" class="form-control" id="message"
+                required 
+                [(ngModel)]="inquiry.message" name="message"
+                #message="ngModel"> 
+        <div [hidden]="message.valid || message.pristine" class="alert alert-danger">
+          message is required
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+  </div>
+
+  <div [hidden]="!submitted">
+    <h2> Thank you for your message! We will contact you shortly!</h2>
+  </div>
+
+
+
+
+</div>
+
