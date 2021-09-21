@@ -14,13 +14,19 @@ const routes: Routes = [
   {path: 'listing-detail', component: ListingDetailComponent},
 =======
 import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   { path: '',   redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent},
+<<<<<<< HEAD
   { path: 'about', component: AboutComponent}
 >>>>>>> 95373f36cf286a1aa88a3fa38233db9e400f40e8
+=======
+  { path: 'about', component: AboutComponent},
+  {path: 'contact', component:ContactComponent}
+>>>>>>> eb675fcbb7a9363912ceaba80f1bff91a4ab3230
 ];
 
 @NgModule({
