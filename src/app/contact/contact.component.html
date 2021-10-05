@@ -1,69 +1,93 @@
-
-<div class="banner">
-  
-</div>
-
-
-<div class="container">
-  <div [hidden]="submitted">
-    <h1>Contact me to begin your Journey</h1>
-    <form (ngSubmit)="onSubmit()" #inquiryForm="ngForm">
-      <div class="form-group">
-        <label for="name">Customer Name*</label>
-        <input type="text" class="form-control" id="name"
-               required 
-               [(ngModel)]="inquiry.custName" name="custName"
-               #name="ngModel"> {{inquiry.custName}}
-        <div [hidden]="name.valid || name.pristine"
-             class="alert alert-danger">
-          Name is required
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <p>We are always here to help. If your have requirements/queries about our services; fill up the contact form
+            below and we'll do our best to reply within 24 hours Alternatively simply pickup the phone and give us a
+            call.</p>
+          <hr />
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="form-group">
-        <label for="email">Email*</label>
-        <input type="text" class="form-control" id="email"
-              required 
-              [(ngModel)]="inquiry.email" name="email"
-              #email="ngModel"> 
-        <div [hidden]="name.valid || name.pristine"
-              class="alert alert-danger">
-           Email is required
+  <section class="form-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <form action="">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="text" class="form-control" placeholder="Full name *">
+
+              </div>
+              <div class="form-group col-md-6">
+                <input type="email" class="form-control" placeholder="Email Address *">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="number" class="form-control" placeholder="Contact Number *">
+
+              </div>
+              <div class="form-group col-md-6">
+                <select class="form-control" name="" id="">
+                  <option selected>Country</option>
+                  <option>Canada</option>
+                  <option>America</option>
+                  <option>England</option>
+                  <option>China</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <input type="text" class="form-control" placeholder="Subject *">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                  <textarea class="form-control" rows="3"></textarea>
+              </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12 text-center">
+                   <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Send Message</button>
+                </div>
+             </div>
+
+          </form>
+
+        </div>
+        <div class="col-md-6 address">
+            <h5>Call Me</h5>
+            <p><a href="tel:+18889990000"><i class="fas fa-phone"></i> +(1) 8889990000 </a><br>
+            </p>
+            <h5>Email / Website</h5>
+            <p>
+               <a href="mailto:capstone.hi5@gmail.com"><i class="fas fa-envelope"></i> capstone.hi5@gmail.com</a><br>
+               <a href="https://mustafasajid.com"><i class="fas fa-globe"></i></i> www.mustafasajid.com </a>
+
+            </p>
+            <h5>Working hours</h5>
+            <p>
+               Mon - Fri : 9am - 6pm(EST)
+            </p>
+            <h5>Address</h5>
+            <p>
+               
+            </p>
          </div>
       </div>
+    </div>
+  </section>
 
-      <div class="form-group">
-        <label for="phoneNum">Phone Number*</label>
-        <input type="text" class="form-control" id="phoneNum"
-                required 
-                [(ngModel)]="inquiry.phoneNum" name="phoneNum"
-                #phoneNum="ngModel"> 
-        <div [hidden]="phoneNum.valid || phoneNum.pristine" class="alert alert-danger">
-          Phone number is required
-        </div>
+  <section>
+      <div class="container-fluid">
+         <!-- <iframe class="embed-responsive-item" src="..."></iframe> -->
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202902.24027650335!2d72.75717812903171!3d19.098888422879796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C+Maharashtra!5e0!3m2!1sen!2sin!4v1544531259939"
+            width="100%" height="300px" frameborder="0" style="border:0"></iframe>
+
       </div>
-
-      <div class="form-group">
-        <label for="message">Message*</label>
-        <input type="text" class="form-control" id="message"
-                required 
-                [(ngModel)]="inquiry.message" name="message"
-                #message="ngModel"> 
-        <div [hidden]="message.valid || message.pristine" class="alert alert-danger">
-          message is required
-        </div>
-      </div>
-
-      <button type="submit" class="btn btn-success">Submit</button>
-    </form>
-  </div>
-
-  <div [hidden]="!submitted">
-    <h2> Thank you for your message! We will contact you shortly!</h2>
-  </div>
-
-
-
-
-</div>
-
+   </section>
