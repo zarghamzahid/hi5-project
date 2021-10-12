@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,6 +18,8 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { HttpClientModule} from '@angular/common/http';
+import { ContactFormComponent } from './contact-form/contact-form.component';
+import { ContactService } from './contact.service';
 
 @NgModule({
   declarations: [
@@ -28,19 +31,21 @@ import { HttpClientModule} from '@angular/common/http';
     ListingMapComponent,
     ListingDetailComponent,
     AboutComponent,
-    ContactComponent 
+    ContactComponent,
+    ContactFormComponent 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule,
     MatTabsModule,
     NoopAnimationsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ContactService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
